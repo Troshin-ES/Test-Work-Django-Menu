@@ -8,18 +8,25 @@
 Древовидно меню любой глубины вложенности
 ## Запуск проекта
 
-Клонируйте репозиторий с проектом на свой компьютер.
+### Клонируйте репозиторий с проектом на свой компьютер.
 
 ```bash
 git clone https://github.com/Troshin-ES/Test-Work-Django-Menu.git
 ```
-
-Выполните команды:
+### Выполните команды:
 ```bash
 python manage.py makemigrations
 python manage.py migrate
 ```
+### Создайте суперпользователя:
+```bash 
+python manage.py createsuperuser
+```
+### Запустите тестовый сервер:
+```bash 
+python manage.py runserver
+```
 
-### Автор:
+## Автор:
 _Трошин Евгений_<br>
 **email**: _troshin-es@mail.ru_<br>
