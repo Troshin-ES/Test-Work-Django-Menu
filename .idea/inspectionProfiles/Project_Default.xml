@@ -1,0 +1,21 @@
+<component name="InspectionProjectProfileManager">
+  <profile version="1.0">
+    <option name="myName" value="Project Default" />
+    <inspection_tool class="PyUnresolvedReferencesInspection" enabled="true" level="WARNING" enabled_by_default="true">
+      <option name="ignoredIdentifiers">
+        <list>
+          <option value="user.models.Subscriptions.*" />
+          <option value="recipe.models.Recipes.*" />
+          <option value="recipe.models.FavoriteRecipes.*" />
+          <option value="recipe.models.Tags.*" />
+          <option value="user.models.Subscription.*" />
+          <option value="recipe.models.Recipe.*" />
+          <option value="recipe.models.FavoriteRecipe.*" />
+          <option value="recipe.models.ShoppingList.*" />
+          <option value="recipe.models.Ingredient.*" />
+          <option value="recipe.models.AmountIngredient.*" />
+        </list>
+      </option>
+    </inspection_tool>
+  </profile>
+</component>

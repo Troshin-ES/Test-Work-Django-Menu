@@ -1,0 +1,10 @@
+
+<ul class="menu">
+    {% for menu_item in menu_items %}
+        <li><a href="{{ menu_item.url }}">{{ menu_item.name }}</a></li>
+        {% if menu_item.children is not None %}
+            {% load common_tags %}
+            {% show_menu_h menu_item.children.all %}
+        {% endif %}
+    {% endfor %}
+</ul>
