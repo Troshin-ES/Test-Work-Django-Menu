@@ -9,7 +9,6 @@ def show_menu(nodes, prevision_node):
     if nodes is None:
         nodes = Menu.objects.all()
         return {'nodes': top_nodes(nodes)}
-    print(nodes)
     return {'nodes': nodes,
             'prevision_node': prevision_node}
 
