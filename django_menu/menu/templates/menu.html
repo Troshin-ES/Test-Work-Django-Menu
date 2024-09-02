@@ -1,10 +1,12 @@
+{% load common_tags %}
 
 <ul class="menu">
-    {% for menu_item in menu_items %}
-        <li><a href="{{ menu_item.url }}">{{ menu_item.name }}</a></li>
-        {% if menu_item.children is not None %}
-            {% load common_tags %}
-            {% show_menu_h menu_item.children.all %}
+    {% for node in nodes %}
+        {% if node.parent is None or prevision_node == node.parent %}
+            <li><a href="{{ node.url}}">{{ node.name }}</a></li>
+        {% endif %}
+        {% if node.children is not Note %}
+            {% show_menu node.children.all node %}
         {% endif %}
     {% endfor %}
 </ul>

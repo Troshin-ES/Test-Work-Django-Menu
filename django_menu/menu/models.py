@@ -5,7 +5,6 @@ from django.db import models
 class Menu(models.Model):
     name = models.CharField('Название пункта меню', max_length=100)
     url = models.CharField('Ссылка', max_length=255)
-    # position = models.PositiveIntegerField('Позиция', default=1, unique=True)
     parent = models.ForeignKey('self',
                                on_delete=models.CASCADE,
                                null=True,
@@ -17,7 +16,7 @@ class Menu(models.Model):
         return str(self.name)
 
     class Meta:
-        # ordering = ('position',)
+        ordering = ('id',)
         verbose_name = 'Пункт меню'
         verbose_name_plural = 'Пункты меню'
 
