@@ -1,12 +1,23 @@
 {% load common_tags %}
+{% load admin_urls %}
+{{ request.build_absolute_uri }}
 
-<ul class="menu">
+<ul>
     {% for node in nodes %}
+        {% if node.url == request.path %}
+            <details open="">
+        {% else %}
+            <details>
+        {% endif %}
+
         {% if node.parent is None or prevision_node == node.parent %}
-            <li><a href="{{ node.url}}">{{ node.name }}</a></li>
+            <summary><a href="{{node.url}}">{{ node.name_item }}</a></summary>
         {% endif %}
         {% if node.children is not Note %}
-            {% show_menu node.children.all node %}
+            {% draw_menu name_menu node.children.all node %}
         {% endif %}
+        </details>
+
     {% endfor %}
 </ul>
+

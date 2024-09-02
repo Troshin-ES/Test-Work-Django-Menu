@@ -6,8 +6,9 @@
 </head>
 <body>
     {% load common_tags %}
-
+<!--    {{ request.get_full_path }}-->
+<!--    {{ request.build_absolute_uri }}-->
     # В нужном месте вставляете ваше меню
-    {% show_menu None None %}
+    {% draw_menu 'Main' None None %}
 </body>
 </html>
