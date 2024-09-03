@@ -1,9 +1,19 @@
 from django.db import models
 
 
-# Create your models here.
 class Menu(models.Model):
-    name_menu = models.CharField('Название меню', max_length=100)
+    name = models.CharField('Название меню', max_length=200, unique=True)
+
+    def __str__(self):
+        return f'{self.name}'
+
+    class Meta:
+        verbose_name = 'Меню'
+        verbose_name_plural = 'Меню'
+
+
+class MenuItems(models.Model):
+    name_menu = models.ForeignKey(Menu, related_name='menu_items', on_delete=models.CASCADE)
     name_item = models.CharField('Название пункта меню', max_length=100)
     url = models.CharField('Ссылка', max_length=255)
     parent = models.ForeignKey('self',
