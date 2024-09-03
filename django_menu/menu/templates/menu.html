@@ -9,7 +9,7 @@
         </li>
     {% endif %}
     {% if node.children is not Note %}
-        {% draw_menu name_menu.name nodes=node.children.all prevision_node=node %}
+        {% draw_menu name_menu.name nodes=node.children.all prevision_node=node context %}
     {% endif %}
 
 {% endfor %}
