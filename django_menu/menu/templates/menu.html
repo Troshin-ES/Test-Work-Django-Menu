@@ -8,8 +8,8 @@
             <a class="active" href="{{node.url}}">{{ node.name_item }}</a>
         </li>
     {% endif %}
-    {% if node.children is not Note %}
-        {% draw_menu name_menu.name nodes=node.children.all prevision_node=node context %}
+    {% if node.children %}
+        {% draw_menu name_menu.name nodes=node.children.all prevision_node=node %}
     {% endif %}
 
 {% endfor %}

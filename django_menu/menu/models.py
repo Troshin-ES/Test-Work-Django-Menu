@@ -26,6 +26,9 @@ class MenuItems(models.Model):
     def __str__(self):
         return f'{self.name_menu}: {self.name_item}'
 
+    # def save_url:
+
+
     class Meta:
         ordering = ('name_menu',)
         verbose_name = 'Пункт меню'
